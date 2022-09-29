@@ -22,10 +22,9 @@ class Ut01Ex01Activity : AppCompatActivity() {
     private fun initSharedPreferences() {
         //val spCustomer: SharedPreferenceLocalSource = SharedPreferenceSource(this)
         val spCustomer = SharedPreferenceLocalSource(this)
-        spCustomer.saveCustomer(Customer(2, "Customer2", "Surname1", true))
+        spCustomer.saveCustomer(Customer(2, "Customer2", "Surname2", true))
 
         ContextCompat.getColor(this, R.color.black)
-        application.cont
 
         val newCustomer = spCustomer.getCustomer()
         Log.d("@dev", "Customer $newCustomer")
