@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AAD-2022</string>
-    <string name="preference_ut01ex01">AAD-2022</string>
+    <string name="preference_ut01ex01">ut01ex01</string>
+    <string name="key_app">ut01ex02_app</string>
 </resources>
