@@ -25,7 +25,6 @@ class Ut01Ex01Activity : AppCompatActivity() {
         spCustomer.saveCustomer(Customer(2, "Customer2", "Surname1", true))
 
         ContextCompat.getColor(this, R.color.black)
-        application.cont
 
         val newCustomer = spCustomer.getCustomer()
         Log.d("@dev", "Customer $newCustomer")
