@@ -13,12 +13,8 @@ class UserRepository (
      * First from local and then from remote
      */
     fun getUsers(): List<User> {
-        var users = localSource.getUsers()
-        if (users == null){
-            users = remoteSource.getUsers()
-            localSource.saveUsers(users)
-        }
-        return users
+        val users = remoteSource.getUsers()
+        localSource.saveUsers(users)
     }
 
     fun getUserById(userId: Int) : User {

@@ -16,7 +16,7 @@ class UsersRemoteDataSource {
             User(4, "User4", "Username4"),
             User(5, "User5", "Username5"),
             User(6, "User6", "Username6"),
-            User(7, "User7", "Username7"),
+            User(7, "User7", "Username7")
         )
     }
 

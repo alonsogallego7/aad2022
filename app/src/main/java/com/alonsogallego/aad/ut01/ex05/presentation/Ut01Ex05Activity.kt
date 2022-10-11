@@ -19,11 +19,10 @@ class Ut01Ex05Activity : AppCompatActivity() {
     private fun init(){
         //Obtain all users from data layer
         val userRepository = UserRepository(
-            UsersLocalDataSource(),
+            UsersLocalDataSource(this.getPreferences(MODE_PRIVATE)),
             UsersRemoteDataSource()
         )
 
-        val users = userRepository.getUsers()
-        Log.d("@dev", "Users: $users")
+        userRepository.getUsers()
     }
 }

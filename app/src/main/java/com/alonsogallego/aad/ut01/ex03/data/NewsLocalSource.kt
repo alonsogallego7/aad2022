@@ -61,8 +61,4 @@ class NewsLocalSource (private val sharedPref: SharedPreferences) {
         }.toMutableList()
     }
 
-    private fun secure() {
-        val secure = SecureSharedPreferences(applicationContext)
-        secure.saveNews(News(1, "News1", "News1", "News1"))
-    }
 }
