@@ -23,6 +23,11 @@ class Ut01Ex05Activity : AppCompatActivity() {
             UsersRemoteDataSource()
         )
 
-        userRepository.getUsers()
+        Log.d("@dev", "Users: ${userRepository.getUsers()}")
+        Log.d("@dev", "User: ${userRepository.getUserById(1)}")
+        userRepository.removeUser(1)
+        Log.d("@dev", "User: ${userRepository.getUsers()}")
+
+
     }
 }

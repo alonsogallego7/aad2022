@@ -13,16 +13,25 @@ class UserRepository (
      * First from local and then from remote
      */
     fun getUsers(): List<User> {
-        val users = remoteSource.getUsers()
-        localSource.saveUsers(users)
+        var users = localSource.getUsers()
+        if (users.isEmpty()) {
+            users = remoteSource.getUsers()
+            localSource.saveUsers(users)
+        }
+        return users
     }
 
     fun getUserById(userId: Int) : User {
-        //TODO: verificar en local sino en remote
+        var user = localSource.findById(userId)
+        if (user == null) {
+            user = remoteSource.getUser(userId)
+            localSource.saveUser(user)
+        }
+        return user
     }
 
     fun removeUser(userId: Int){
-        //TODO (local)
+        localSource.remove(userId)
     }
 
 }
