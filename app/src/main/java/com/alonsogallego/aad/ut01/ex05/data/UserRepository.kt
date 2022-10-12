@@ -25,7 +25,6 @@ class UserRepository (
         var user = localSource.findById(userId)
         if (user == null) {
             user = remoteSource.getUser(userId)
-            localSource.saveUser(user)
         }
         return user
     }
